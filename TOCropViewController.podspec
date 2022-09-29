@@ -13,4 +13,8 @@ Pod::Spec.new do |s|
     'TOCropViewControllerBundle' => ['Objective-C/TOCropViewController/**/*.lproj']
   }
   s.requires_arc = true
+  s.libraries = 'swiftCoreGraphics'
+  s.xcconfig = {
+      'LIBRARY_SEARCH_PATHS' => '$(SDKROOT)/usr/lib/swift',
+  }
 end
